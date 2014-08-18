@@ -55,3 +55,12 @@ and with `@Min`/`@Max` support limited to non decimal minimum/maximum constraint
 If you are interested in contributing some code to this project, thanks! Please submit a [Contributors Agreement](https://api-notebook.anypoint.mulesoft.com/notebooks#bc1cf75a0284268407e4) acknowledging that you are transferring ownership.
 
 To discuss this project, please use its github issues or the [RAML forum](http://forums.raml.org/).
+
+---
+
+You can add the following remotes: 
+
+`git remote add justin-calleja https://github.com/justin-calleja/raml-jaxrs-codegen.git`
+`git remote add mulesoft https://github.com/mulesoft/raml-jaxrs-codegen.git`
+
+mulesoft is the original. It is not bound to any JAX-RS implementation. justin-calleja has a branch (currently 'tied-to-jersey') which is bound to Jersey. This fork was forked from justin-calleja i.e. it has 'tied-to-jersey'. Adding the remotes will allow you to pull from either.
