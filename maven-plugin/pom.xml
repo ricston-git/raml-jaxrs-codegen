@@ -9,7 +9,7 @@
     </parent>
 
     <groupId>org.raml.plugins</groupId>
-    <artifactId>raml-jaxrs-maven-plugin</artifactId>
+    <artifactId>raml-jaxrs-jersey-maven-plugin</artifactId>
     <packaging>maven-plugin</packaging>
     <name>RAML JAX-RS Maven Plug-in</name>
 
@@ -21,7 +21,7 @@
     <dependencies>
         <dependency>
             <groupId>org.raml</groupId>
-            <artifactId>raml-jaxrs-codegen-core</artifactId>
+            <artifactId>raml-jaxrs-jersey-codegen-core</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
