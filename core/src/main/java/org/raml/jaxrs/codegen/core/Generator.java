@@ -42,7 +42,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
-import javax.mail.internet.MimeMultipart;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
@@ -65,6 +64,7 @@ import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.Validate;
 import org.apache.commons.lang.builder.ToStringBuilder;
 import org.apache.commons.lang.math.NumberUtils;
+import org.glassfish.jersey.media.multipart.FormDataMultiPart;
 import org.raml.model.Action;
 import org.raml.model.MimeType;
 import org.raml.model.Raml;
@@ -513,8 +513,10 @@ public class Generator
         else if (MediaType.MULTIPART_FORM_DATA.equals(bodyMimeType.getType()))
         {
             // use a "catch all" javax.mail.internet.MimeMultipart parameter
+//            addCatchAllFormParametersArgument(bodyMimeType, method, javadoc,
+//                types.getGeneratorType(MimeMultipart.class));
             addCatchAllFormParametersArgument(bodyMimeType, method, javadoc,
-                types.getGeneratorType(MimeMultipart.class));
+                types.getGeneratorType(FormDataMultiPart.class));
         }
         else
         {
